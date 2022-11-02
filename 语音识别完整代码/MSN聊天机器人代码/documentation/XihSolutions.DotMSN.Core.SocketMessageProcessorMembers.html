@@ -1,0 +1,113 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>SocketMessageProcessor Members</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">DotMSN</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">SocketMessageProcessor Members
+					</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p>
+        <a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.html">SocketMessageProcessor overview</a>
+      </p>
+      <h4 class="dtH4">Public Instance Constructors</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr VALIGN="top">
+            <td width="50%">
+              <img src="pubmethod.gif" />
+              <a href="XihSolutions.DotMSN.Core.SocketMessageProcessorConstructor.html">SocketMessageProcessor Constructor</a>
+            </td>
+            <td width="50%"> Constructor to instantiate a SocketMessageProcessor object. </td>
+          </tr>
+        </table>
+      </div>
+      <h4 class="dtH4">Public Instance Properties</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.Connected.html">Connected</a></td><td width="50%"> Determines whether the socket is connected </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.ConnectivitySettings.html">ConnectivitySettings</a></td><td width="50%"> Specifies the connection configuration used to set up the socket connection. By default the basic constructor is called. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.LocalEndPoint.html">LocalEndPoint</a></td><td width="50%"> The local end point of the connection </td></tr></table>
+      </div>
+      <h4 class="dtH4">Public Instance Methods</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.Connect.html">Connect</a></td><td width="50%"> Connect to the endpoint specified in the ConnectivitySettings field. If the socket is already connected this method will return immediately and leave the current connection open. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.Disconnect.html">Disconnect</a></td><td width="50%"> Disconnect the current connection by sending the OUT command and closing the socket. If the connection is already closed nothing happens (<i>no</i> exception is thrown). </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassEqualsTopic.htm">Equals</a> (inherited from <b>Object</b>)</td><td width="50%">Determines whether the specified <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> is equal to the current <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a>.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassGetHashCodeTopic.htm">GetHashCode</a> (inherited from <b>Object</b>)</td><td width="50%">Serves as a hash function for a particular type. <b>GetHashCode</b> is suitable for use in hashing algorithms and data structures like a hash table.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassGetTypeTopic.htm">GetType</a> (inherited from <b>Object</b>)</td><td width="50%">Gets the <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemTypeClassTopic.htm">Type</a> of the current instance.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.RegisterHandler.html">RegisterHandler</a></td><td width="50%"> Registers a message handler with this processor. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.SendMessage.html">SendMessage</a></td><td width="50%"> The base class does nothing here. Descendant classes should implement this function by encoding the message in a byte array and send it using the <a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.SendSocketData_overload_1.html">SendSocketData</a> method. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassToStringTopic.htm">ToString</a> (inherited from <b>Object</b>)</td><td width="50%">Returns a <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemStringClassTopic.htm">String</a> that represents the current <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a>.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.UnregisterHandler.html">UnregisterHandler</a></td><td width="50%"> Unregisters the message handler from this processor. </td></tr></table>
+      </div>
+      <h4 class="dtH4">Public Instance Events</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubevent.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.ConnectingException.html">ConnectingException</a></td><td width="50%"> Occurs when an exception was raised while <i>connecting</i> to the endpoint. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubevent.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.ConnectionClosed.html">ConnectionClosed</a></td><td width="50%"> Occurs when a connection is closed with the remote endpoint. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubevent.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.ConnectionEstablished.html">ConnectionEstablished</a></td><td width="50%"> Occurs when a connection is established with the remote endpoint. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubevent.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.ConnectionException.html">ConnectionException</a></td><td width="50%"> Occurs when an exception was raised which caused the open connection to become invalid. </td></tr></table>
+      </div>
+      <h4 class="dtH4">Protected Instance Properties</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="protproperty.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.MessageHandlers.html">MessageHandlers</a></td><td width="50%"> Holds all messagehandlers for this socket processor </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protproperty.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.MessagePool.html">MessagePool</a></td><td width="50%"> The messagepool used to buffer messages. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protproperty.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.ProxyEndPoint.html">ProxyEndPoint</a></td><td width="50%"> Set when a socket is prepared with proxy server enabled. This caches the ip adress of the proxyserver and eliminates resolving it everytime a socket is prepared. </td></tr></table>
+      </div>
+      <h4 class="dtH4">Protected Instance Methods</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.BeginDataReceive.html">BeginDataReceive</a></td><td width="50%"> Starts an a-synchronous receive. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.EndConnectCallback.html">EndConnectCallback</a></td><td width="50%"> The callback used by the Socket.BeginConnect() method. The ProxySocket class behaves different from the standard Socket class. The callback is called after a connection has already been established. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.EndReceiveCallback.html">EndReceiveCallback</a></td><td width="50%"> The callback used by the Socket.BeginReceive method. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.EndSendCallback.html">EndSendCallback</a></td><td width="50%"> The callback used by the Socket.BeginReceive method. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassFinalizeTopic.htm">Finalize</a> (inherited from <b>Object</b>)</td><td width="50%">Allows an <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> to attempt to free resources and perform other cleanup operations before the <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> is reclaimed by garbage collection.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.GetPreparedSocket.html">GetPreparedSocket</a></td><td width="50%"> Returns a socket which is setup using the settings in the ConnectivitySettings field. Always use this method when you want to use sockets. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassMemberwiseCloneTopic.htm">MemberwiseClone</a> (inherited from <b>Object</b>)</td><td width="50%">Creates a shallow copy of the current <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a>.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.OnConnected.html">OnConnected</a></td><td width="50%"> Fires the Connected event. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.OnDisconnected.html">OnDisconnected</a></td><td width="50%"> Fires the Disconnected event. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.OnMessageReceived.html">OnMessageReceived</a></td><td width="50%"> This methods is called when data is retreived from the message pool. It represents a single message. The processor has to convert this to a NetworkMessage object and pass it on to a MessageHandler. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.SendSocketData_overloads.html">SendSocketData</a></td><td width="50%">Overloaded.  Used by descendants classes to send raw byte data over the socket connection. This function is at the moment blocking. This method uses the default socket in the SocketMessageProcessor class. </td></tr></table>
+      </div>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.html">SocketMessageProcessor Class</a> | <a href="XihSolutions.DotMSN.Core.html">XihSolutions.DotMSN.Core Namespace</a></p>
+      <object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext="true" style="display: none;">
+        <param name="Keyword" value="SocketMessageProcessor class">
+        </param>
+        <param name="Keyword" value="XihSolutions.DotMSN.Core.SocketMessageProcessor class">
+        </param>
+        <param name="Keyword" value="SocketMessageProcessor class, all members">
+        </param>
+      </object>
+      <hr />
+      <div id="footer">
+        <p>
+          <a>Copyright 2002-2006 Xih Solutions</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

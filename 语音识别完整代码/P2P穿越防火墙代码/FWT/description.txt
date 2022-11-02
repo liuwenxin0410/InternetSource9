@@ -1,0 +1,61 @@
+
+Directories
+~~~~~~~~~~~~~~~~~~~~~
+
+lib_proxy_socket 			- sources and headers for proxy socket library
+proxy             		- sources and headers for proxy server
+server            		- sources and headers for proxy managing server
+test_client			- simple command line echo client
+
+Makefile targets
+~~~~~~~~~~~~~~~~
+In directories lib_proxy_socket, proxy, server
+$ make all
+
+When making test_client do not forget to copy lib_proxy_socket.a file from lib_proxy_socket folder
+
+Running applications
+~~~~~~~~~~~~~~~~~~~~
+
+minimal command lines.
+server:
+$ ./peerio_srv --listen-port <port>
+
+proxy:
+$ ./peerio_ps --server-address <sa> --server-port <sp> --listen-port <port> [--listen-address <la> --name <proxy-name>]
+
+--listen-address should be used, when both proxy and server are running at the same box. Otherwise server will return local address of the proxy.
+--name should be used if files <proxy-name>.pk and <proxy-name>.sk presents in working directory and are public and private keys respectively. In this case authorization beeing used.
+
+test_client:
+$ ./test_client --server-address <ip> --server-port <port> [--user-name <user-name>]
+--user-name should be used if files <user-name>.pk and <user-name>.sk presents in working directory and are public and private keys respectively. In this case authorization beeing used.
+
+The effective address will be shown. We can send packets with gui-client and enjoy.
+
+Current status
+~~~~~~~~~~~~~~
+
+all the stuff works both windows and linux
+
+various Macro definitions see in appropriate Makefiles
+
+Non-standard functions
+~~~~~~~~~~~~~~~~~~~~~~
+
+extern void set_proxy_over_tcp(unsigned over_tcp);
+- Sets manually flag, saying whether client-proxy interchange is hold ovet TCP or not;
+
+extern unsigned get_proxy_over_tcp(void);
+- gets flag value, saying whether client-proxy interchange is hold ovet TCP or not;
+
+extern void set_proxy_socket_functions(unsigned proxy_socket_functions);
+- Sets flag, saying whether to use proxy-oriented functions or just wrappers for standard functions;
+
+
+extern unsigned get_proxy_socket_functions(void);
+- gets flag, saying whether to use proxy-oriented functions or just wrappers for standard functions;
+
+extern void set_username(char* anusername);
+- sets username for client-proxy authorization, the username used to select key pair;
+

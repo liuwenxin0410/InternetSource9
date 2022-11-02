@@ -1,0 +1,98 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>ProxySocket.BeginConnect Method (EndPoint, AsyncCallback, Object)</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">DotMSN</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">ProxySocket.BeginConnect Method (EndPoint, AsyncCallback, Object)</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> Begins an asynchronous request for a connection to a network device. </p>
+      <div class="syntax">
+        <span class="lang">[Visual Basic]</span>
+        <br />Overloads Public Function BeginConnect( _<br />   ByVal <i>remoteEP</i> As <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemNetEndPointClassTopic.htm">EndPoint</a>, _<br />   ByVal <i>callback</i> As <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemAsyncCallbackClassTopic.htm">AsyncCallback</a>, _<br />   ByVal <i>state</i> As <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> _<br />) As <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemIAsyncResultClassTopic.htm">IAsyncResult</a></div>
+      <div class="syntax">
+        <span class="lang">[C#]</span>
+        <br />new public <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemIAsyncResultClassTopic.htm">IAsyncResult</a> BeginConnect(<br />   <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemNetEndPointClassTopic.htm">EndPoint</a> <i>remoteEP</i>,<br />   <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemAsyncCallbackClassTopic.htm">AsyncCallback</a> <i>callback</i>,<br />   <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">object</a> <i>state</i><br />);</div>
+      <h4 class="dtH4">Parameters</h4>
+      <dl>
+        <dt>
+          <i>remoteEP</i>
+        </dt>
+        <dd>An EndPoint that represents the remote device.</dd>
+        <dt>
+          <i>callback</i>
+        </dt>
+        <dd>The AsyncCallback delegate.</dd>
+        <dt>
+          <i>state</i>
+        </dt>
+        <dd>An object that contains state information for this request.</dd>
+      </dl>
+      <h4 class="dtH4">Return Value</h4>
+      <p>An IAsyncResult that references the asynchronous connection.</p>
+      <h4 class="dtH4">Exceptions</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr valign="top">
+            <th width="50%">Exception Type</th>
+            <th width="50%">Condition</th>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemArgumentNullExceptionClassTopic.htm">ArgumentNullException</a>
+            </td>
+            <td width="50%">The remoteEP parameter is a null reference (Nothing in Visual Basic).</td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemNetSocketsSocketExceptionClassTopic.htm">SocketException</a>
+            </td>
+            <td width="50%">An operating system error occurs while creating the Socket.</td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectDisposedExceptionClassTopic.htm">ObjectDisposedException</a>
+            </td>
+            <td width="50%">The Socket has been closed.</td>
+          </tr>
+        </table>
+      </div>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Org.Mentalis.Network.ProxySocket.ProxySocket.html">ProxySocket Class</a> | <a href="Org.Mentalis.Network.ProxySocket.html">Org.Mentalis.Network.ProxySocket Namespace</a> | <a href="Org.Mentalis.Network.ProxySocket.ProxySocket.BeginConnect_overloads.html">ProxySocket.BeginConnect Overload List</a></p>
+      <object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext="true" style="display: none;">
+        <param name="Keyword" value="BeginConnect method">
+        </param>
+        <param name="Keyword" value="BeginConnect method, ProxySocket class">
+        </param>
+        <param name="Keyword" value="ProxySocket.BeginConnect method">
+        </param>
+      </object>
+      <hr />
+      <div id="footer">
+        <p>
+          <a>Copyright 2002-2006 Xih Solutions</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

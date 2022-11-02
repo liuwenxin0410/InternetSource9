@@ -1,0 +1,106 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>ProxySocket.Connect Method (String, Int32)</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">DotMSN</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">ProxySocket.Connect Method (String, Int32)</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> Establishes a connection to a remote device. </p>
+      <div class="syntax">
+        <span class="lang">[Visual Basic]</span>
+        <br />Overloads Public Sub Connect( _<br />   ByVal <i>host</i> As <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemStringClassTopic.htm">String</a>, _<br />   ByVal <i>port</i> As <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemInt32ClassTopic.htm">Integer</a> _<br />)</div>
+      <div class="syntax">
+        <span class="lang">[C#]</span>
+        <br />new public <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemVoidClassTopic.htm">void</a> Connect(<br />   <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemStringClassTopic.htm">string</a> <i>host</i>,<br />   <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemInt32ClassTopic.htm">int</a> <i>port</i><br />);</div>
+      <h4 class="dtH4">Parameters</h4>
+      <dl>
+        <dt>
+          <i>host</i>
+        </dt>
+        <dd>The remote host to connect to.</dd>
+        <dt>
+          <i>port</i>
+        </dt>
+        <dd>The remote port to connect to.</dd>
+      </dl>
+      <h4 class="dtH4">Remarks</h4>
+      <p>If you use this method with a SOCKS4 server, it will let the server resolve the hostname. Not all SOCKS4 servers support this 'remote DNS' though.</p>
+      <h4 class="dtH4">Exceptions</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr valign="top">
+            <th width="50%">Exception Type</th>
+            <th width="50%">Condition</th>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemArgumentNullExceptionClassTopic.htm">ArgumentNullException</a>
+            </td>
+            <td width="50%">The host parameter is a null reference (Nothing in Visual Basic).</td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemArgumentExceptionClassTopic.htm">ArgumentException</a>
+            </td>
+            <td width="50%">The port parameter is invalid.</td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemNetSocketsSocketExceptionClassTopic.htm">SocketException</a>
+            </td>
+            <td width="50%">An operating system error occurs while accessing the Socket.</td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectDisposedExceptionClassTopic.htm">ObjectDisposedException</a>
+            </td>
+            <td width="50%">The Socket has been closed.</td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="Org.Mentalis.Network.ProxySocket.ProxyException.html">ProxyException</a>
+            </td>
+            <td width="50%">An error Occurred while talking to the proxy server.</td>
+          </tr>
+        </table>
+      </div>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="Org.Mentalis.Network.ProxySocket.ProxySocket.html">ProxySocket Class</a> | <a href="Org.Mentalis.Network.ProxySocket.html">Org.Mentalis.Network.ProxySocket Namespace</a> | <a href="Org.Mentalis.Network.ProxySocket.ProxySocket.Connect_overloads.html">ProxySocket.Connect Overload List</a></p>
+      <object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext="true" style="display: none;">
+        <param name="Keyword" value="Connect method">
+        </param>
+        <param name="Keyword" value="Connect method, ProxySocket class">
+        </param>
+        <param name="Keyword" value="ProxySocket.Connect method">
+        </param>
+      </object>
+      <hr />
+      <div id="footer">
+        <p>
+          <a>Copyright 2002-2006 Xih Solutions</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

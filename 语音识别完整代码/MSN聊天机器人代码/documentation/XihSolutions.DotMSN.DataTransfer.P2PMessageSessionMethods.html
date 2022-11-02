@@ -1,0 +1,85 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>P2PMessageSession Methods</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">DotMSN</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">P2PMessageSession Methods</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p>The methods of the <b>P2PMessageSession</b> class are listed below. For a complete list of <b>P2PMessageSession</b> class members, see the <a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSessionMembers.html">P2PMessageSession Members</a> topic.</p>
+      <h4 class="dtH4">Public Instance Methods</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.AbortAllTransfers.html">AbortAllTransfers</a></td><td width="50%"> Aborts all running transfer sessions. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.AddTransferSession.html">AddTransferSession</a></td><td width="50%"> Adds the specified transfer session to the collection and sets the transfer session's message processor to be the message processor of the p2p message session. This is usally a SB message processor. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.CleanUp.html">CleanUp</a></td><td width="50%"> Removes references to handlers and the messageprocessor. Also closes running transfer sessions and pending processors establishing connections. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.CloseDirectConnection.html">CloseDirectConnection</a></td><td width="50%"> Closes the direct connection with the remote client, if available. A closing p2p message will be send first. The session will fallback to the previous (SB) message processor. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.CorrectLocalIdentifier.html">CorrectLocalIdentifier</a></td><td width="50%"> Corrects the local identifier with the specified correction. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.CreateDirectConnection.html">CreateDirectConnection</a></td><td width="50%"> Creates a direct connection with the remote client. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassEqualsTopic.htm">Equals</a> (inherited from <b>Object</b>)</td><td width="50%">Determines whether the specified <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> is equal to the current <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a>.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.GetHandler.html">GetHandler</a></td><td width="50%"> Searches through all handlers and returns the first object with the specified type, or null if not found. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassGetHashCodeTopic.htm">GetHashCode</a> (inherited from <b>Object</b>)</td><td width="50%">Serves as a hash function for a particular type. <b>GetHashCode</b> is suitable for use in hashing algorithms and data structures like a hash table.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.GetTransferSession.html">GetTransferSession</a></td><td width="50%"> Returns the transfer session associated with the specified session identifier. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassGetTypeTopic.htm">GetType</a> (inherited from <b>Object</b>)</td><td width="50%">Gets the <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemTypeClassTopic.htm">Type</a> of the current instance.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.HandleMessage.html">HandleMessage</a></td><td width="50%"> Handles P2PMessages. Other messages are ignored. All incoming messages are supposed to belong to this session. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.IncreaseLocalIdentifier.html">IncreaseLocalIdentifier</a></td><td width="50%"> The identifier of the local client, increases with each message send </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.IncreaseRemoteIdentifier.html">IncreaseRemoteIdentifier</a></td><td width="50%"> The identifier of the remote client, increases with each message received </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.ListenForDirectConnection.html">ListenForDirectConnection</a></td><td width="50%"> Setups a P2PDirectProcessor to listen for incoming connections. After a connection has been established the P2PDirectProcessor will become the main MessageProcessor to send messages. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.RegisterHandler.html">RegisterHandler</a></td><td width="50%"> Registers a message handler. After registering the handler will receive incoming messages. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.RemoveTransferSession.html">RemoveTransferSession</a></td><td width="50%"> Removes the specified transfer session from the collection. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.SendMessage.html">SendMessage</a></td><td width="50%"> Sends incoming p2p messages to the remote contact. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassToStringTopic.htm">ToString</a> (inherited from <b>Object</b>)</td><td width="50%">Returns a <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemStringClassTopic.htm">String</a> that represents the current <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a>.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.UnregisterHandler.html">UnregisterHandler</a></td><td width="50%"> Unregisters a message handler. After registering the handler will no longer receive incoming messages. </td></tr></table>
+      </div>
+      <h4 class="dtH4">Protected Instance Methods</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.AddPendingProcessor.html">AddPendingProcessor</a></td><td width="50%"> Add the processor to the pending list. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.BufferMessage.html">BufferMessage</a></td><td width="50%"> Buffer messages that can not be send because of an invalid message processor. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassFinalizeTopic.htm">Finalize</a> (inherited from <b>Object</b>)</td><td width="50%">Allows an <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> to attempt to free resources and perform other cleanup operations before the <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> is reclaimed by garbage collection.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.InvalidateProcessor.html">InvalidateProcessor</a></td><td width="50%"> Sets the processor as invalid, and requests the p2phandler for a new request. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassMemberwiseCloneTopic.htm">MemberwiseClone</a> (inherited from <b>Object</b>)</td><td width="50%">Creates a shallow copy of the current <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a>.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.OnHandshakeCompleted.html">OnHandshakeCompleted</a></td><td width="50%"> Occurs when an acknowledgement to a send handshake has been received, or a handshake is received. This will start the data transfer, provided the local client is the sender. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.OnProcessorInvalid.html">OnProcessorInvalid</a></td><td width="50%"> Fires the ProcessorInvalid event. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.SendBuffer.html">SendBuffer</a></td><td width="50%"> Try to resend any messages that were stored in the buffer. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.SendHandshakeMessage.html">SendHandshakeMessage</a></td><td width="50%"> Sends the handshake message in a direct connection. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.StopAllPendingProcessors.html">StopAllPendingProcessors</a></td><td width="50%"> Disconnect all processors that are trying to establish a connection. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.UsePendingProcessor.html">UsePendingProcessor</a></td><td width="50%"> Use the given processor as the direct connection processor. And disconnect all other pending processors. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.ValidateProcessor.html">ValidateProcessor</a></td><td width="50%"> Sets the processor as valid. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.WrapMessage.html">WrapMessage</a></td><td width="50%"> Wraps a P2PMessage in a MSGMessage and SBMessage. </td></tr></table>
+      </div>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.html">P2PMessageSession Class</a> | <a href="XihSolutions.DotMSN.DataTransfer.html">XihSolutions.DotMSN.DataTransfer Namespace</a></p>
+      <object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext="true" style="display: none;">
+        <param name="Keyword" value="P2PMessageSession class, methods">
+        </param>
+      </object>
+      <hr />
+      <div id="footer">
+        <p>
+          <a>Copyright 2002-2006 Xih Solutions</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

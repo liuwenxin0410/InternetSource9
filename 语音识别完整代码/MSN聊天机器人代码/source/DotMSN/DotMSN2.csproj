@@ -1,0 +1,305 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AC82DBB-59B4-49ED-8F30-99738C09F1A9}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>XihSolutions.DotMSN</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>XihSolutions.DotMSN</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>XihSolutions.DotMSN.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>XihSolutions.DotMSN.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Full|AnyCPU' ">
+    <OutputPath>..\deployment\dll\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>XihSolutions.DotMSN.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Light|AnyCPU' ">
+    <OutputPath>..\deployment\dll\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>XihSolutions.DotMSN.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Signed|AnyCPU' ">
+    <OutputPath>bin\Signed\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Strong|AnyCPU' ">
+    <OutputPath>..\deployment\dll\strong\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConnectivityException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConnectivitySettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contact.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContactGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContactGroupList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContactList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Conversation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Credentials.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DisplayImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DotMSNException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Emoticon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmoticonMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMessageHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MailEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessagePool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageProcessor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Messenger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MobileMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MSNMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MSNObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MSNSLPHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MSNSLPMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetworkMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NotificationMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NS9MessageHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NSMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NSMessagePool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NSMessageProcessor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="P2PDCPool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="P2PDirectProcessor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="P2PHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="P2PMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="P2PMessagePool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="P2PMessageSession.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="P2PTransferSession.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistentStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProxySocket\AuthMethod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProxySocket\AuthNone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProxySocket\AuthUserPass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProxySocket\IAsyncProxyResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProxySocket\ProxyException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProxySocket\ProxySocket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProxySocket\Socks4Handler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProxySocket\Socks5Handler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProxySocket\SocksHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SB9MessageHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SBMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SBMessagePool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SBMessageProcessor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SBMSGMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SocketMessageProcessor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnauthorizedException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="owner.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

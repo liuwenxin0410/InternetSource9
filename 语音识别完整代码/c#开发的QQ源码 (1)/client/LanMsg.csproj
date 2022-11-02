@@ -1,0 +1,362 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94A14971-C92E-4424-A6C0-A490171D830C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>community.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LanMsg</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LanMsg</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar">
+      <Name>DevComponents.DotNetBar</Name>
+      <HintPath>bin\Debug\DevComponents.DotNetBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <Name>System.Drawing.Design</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap">
+      <Name>System.Runtime.Serialization.Formatters.Soap</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CaptureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassFormMain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ClassForms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ClassOptionData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ClassRtfMsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ClassSendImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ClassSerializers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ClassTextMsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ClassUserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ClassUsers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\MFCAPI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\MyGifPicture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NativeMethods.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\OfficeMenus\Globals.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\OfficeMenus\MainMenuItemDrawing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\OfficeMenus\MenuItemDrawing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\OfficeMenus\OfficeMenus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\p2pFilesSend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RichTextBoxPlus\RichEditOle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\RichTextBoxPlus\WindowsMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\SockUDP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskbarNotifier\TaskbarNotifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\XpProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsgMis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSendMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSendMsgGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="CaptureForm.resx">
+      <DependentUpon>CaptureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="close.bmp" />
+    <EmbeddedResource Include="close2.bmp" />
+    <EmbeddedResource Include="Controls\MFCAPI.resx">
+      <DependentUpon>MFCAPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MyGifPicture.resx">
+      <DependentUpon>MyGifPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OfficeMenus\OfficeMenus.bmp" />
+    <EmbeddedResource Include="Controls\OfficeMenus\OfficeMenus.resx">
+      <DependentUpon>OfficeMenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\p2pFilesSend.resx">
+      <DependentUpon>p2pFilesSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RichTextBox.resx">
+      <DependentUpon>RichTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SockUDP.resx">
+      <DependentUpon>SockUDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TaskbarNotifier\TaskbarNotifier.resx">
+      <DependentUpon>TaskbarNotifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\XpProgressBar.resx">
+      <DependentUpon>XpProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevComponents.DotNetBar.dll" />
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsgMis.resx">
+      <DependentUpon>FormMsgMis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotice.dotNetBarManager1.xml" />
+    <EmbeddedResource Include="FormNotice.resx">
+      <DependentUpon>FormNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSendMsg.dotNetBarManager1.xml" />
+    <EmbeddedResource Include="FormSendMsg.resx">
+      <DependentUpon>FormSendMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSendMsgGroup.dotNetBarManager1.xml" />
+    <EmbeddedResource Include="FormSendMsgGroup.resx">
+      <DependentUpon>FormSendMsgGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record.pti" />
+    <EmbeddedResource Include="Resources\0.gif" />
+    <EmbeddedResource Include="Resources\1.gif" />
+    <EmbeddedResource Include="Resources\10.gif" />
+    <EmbeddedResource Include="Resources\11.gif" />
+    <EmbeddedResource Include="Resources\12.gif" />
+    <EmbeddedResource Include="Resources\13.gif" />
+    <EmbeddedResource Include="Resources\14.gif" />
+    <EmbeddedResource Include="Resources\15.gif" />
+    <EmbeddedResource Include="Resources\16.gif" />
+    <EmbeddedResource Include="Resources\17.gif" />
+    <EmbeddedResource Include="Resources\18.gif" />
+    <EmbeddedResource Include="Resources\19.gif" />
+    <EmbeddedResource Include="Resources\2.gif" />
+    <EmbeddedResource Include="Resources\20.gif" />
+    <EmbeddedResource Include="Resources\21.gif" />
+    <EmbeddedResource Include="Resources\22.gif" />
+    <EmbeddedResource Include="Resources\23.gif" />
+    <EmbeddedResource Include="Resources\24.gif" />
+    <EmbeddedResource Include="Resources\25.gif" />
+    <EmbeddedResource Include="Resources\26.gif" />
+    <EmbeddedResource Include="Resources\27.gif" />
+    <EmbeddedResource Include="Resources\28.gif" />
+    <EmbeddedResource Include="Resources\29.gif" />
+    <EmbeddedResource Include="Resources\3.gif" />
+    <EmbeddedResource Include="Resources\30.gif" />
+    <EmbeddedResource Include="Resources\31.gif" />
+    <EmbeddedResource Include="Resources\32.gif" />
+    <EmbeddedResource Include="Resources\33.gif" />
+    <EmbeddedResource Include="Resources\34.gif" />
+    <EmbeddedResource Include="Resources\35.gif" />
+    <EmbeddedResource Include="Resources\36.gif" />
+    <EmbeddedResource Include="Resources\37.gif" />
+    <EmbeddedResource Include="Resources\38.gif" />
+    <EmbeddedResource Include="Resources\39.gif" />
+    <EmbeddedResource Include="Resources\4.gif" />
+    <EmbeddedResource Include="Resources\40.gif" />
+    <EmbeddedResource Include="Resources\41.gif" />
+    <EmbeddedResource Include="Resources\42.gif" />
+    <EmbeddedResource Include="Resources\43.gif" />
+    <EmbeddedResource Include="Resources\44.gif" />
+    <EmbeddedResource Include="Resources\45.gif" />
+    <EmbeddedResource Include="Resources\46.gif" />
+    <EmbeddedResource Include="Resources\47.gif" />
+    <EmbeddedResource Include="Resources\48.gif" />
+    <EmbeddedResource Include="Resources\49.gif" />
+    <EmbeddedResource Include="Resources\5.gif" />
+    <EmbeddedResource Include="Resources\50.gif" />
+    <EmbeddedResource Include="Resources\51.gif" />
+    <EmbeddedResource Include="Resources\52.gif" />
+    <EmbeddedResource Include="Resources\53.gif" />
+    <EmbeddedResource Include="Resources\54.gif" />
+    <EmbeddedResource Include="Resources\55.gif" />
+    <EmbeddedResource Include="Resources\56.gif" />
+    <EmbeddedResource Include="Resources\57.gif" />
+    <EmbeddedResource Include="Resources\58.gif" />
+    <EmbeddedResource Include="Resources\59.gif" />
+    <EmbeddedResource Include="Resources\6.gif" />
+    <EmbeddedResource Include="Resources\60.gif" />
+    <EmbeddedResource Include="Resources\61.gif" />
+    <EmbeddedResource Include="Resources\62.gif" />
+    <EmbeddedResource Include="Resources\63.gif" />
+    <EmbeddedResource Include="Resources\64.gif" />
+    <EmbeddedResource Include="Resources\65.gif" />
+    <EmbeddedResource Include="Resources\66.gif" />
+    <EmbeddedResource Include="Resources\67.gif" />
+    <EmbeddedResource Include="Resources\68.gif" />
+    <EmbeddedResource Include="Resources\69.gif" />
+    <EmbeddedResource Include="Resources\7.gif" />
+    <EmbeddedResource Include="Resources\70.gif" />
+    <EmbeddedResource Include="Resources\71.gif" />
+    <EmbeddedResource Include="Resources\72.gif" />
+    <EmbeddedResource Include="Resources\73.gif" />
+    <EmbeddedResource Include="Resources\74.gif" />
+    <EmbeddedResource Include="Resources\75.gif" />
+    <EmbeddedResource Include="Resources\76.gif" />
+    <EmbeddedResource Include="Resources\77.gif" />
+    <EmbeddedResource Include="Resources\78.gif" />
+    <EmbeddedResource Include="Resources\79.gif" />
+    <EmbeddedResource Include="Resources\8.gif" />
+    <EmbeddedResource Include="Resources\80.gif" />
+    <EmbeddedResource Include="Resources\81.gif" />
+    <EmbeddedResource Include="Resources\82.gif" />
+    <EmbeddedResource Include="Resources\83.gif" />
+    <EmbeddedResource Include="Resources\84.gif" />
+    <EmbeddedResource Include="Resources\85.gif" />
+    <EmbeddedResource Include="Resources\86.gif" />
+    <EmbeddedResource Include="Resources\87.gif" />
+    <EmbeddedResource Include="Resources\88.gif" />
+    <EmbeddedResource Include="Resources\89.gif" />
+    <EmbeddedResource Include="Resources\9.gif" />
+    <EmbeddedResource Include="Resources\90.gif" />
+    <EmbeddedResource Include="Resources\91.gif" />
+    <EmbeddedResource Include="Resources\92.gif" />
+    <EmbeddedResource Include="Resources\93.gif" />
+    <EmbeddedResource Include="Resources\94.gif" />
+    <EmbeddedResource Include="Resources\95.gif" />
+    <EmbeddedResource Include="Resources\ErrorImage.GIF" />
+    <EmbeddedResource Include="skin.bmp" />
+    <EmbeddedResource Include="skin2.bmp" />
+    <EmbeddedResource Include="skin3.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

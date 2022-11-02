@@ -1,0 +1,109 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>Messenger.TransferInvitationReceived Event</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">DotMSN</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">Messenger.TransferInvitationReceived Event
+					</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> Occurs when a remote client has send an invitation for a filetransfer session. </p>
+      <div class="syntax">
+        <span class="lang">[Visual Basic]</span>
+        <br />Public Event TransferInvitationReceived As <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPInvitationReceivedEventHandler.html">MSNSLPInvitationReceivedEventHandler</a></div>
+      <div class="syntax">
+        <span class="lang">[C#]</span>
+        <br />public event <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPInvitationReceivedEventHandler.html">MSNSLPInvitationReceivedEventHandler</a> TransferInvitationReceived;</div>
+      <p>
+      </p>
+      <h4 class="dtH4">Event Data</h4>
+      <p>The event handler receives an argument of type <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPInvitationEventArgs.html">MSNSLPInvitationEventArgs</a> containing data related to this event. The following <B>MSNSLPInvitationEventArgs</B> properties provide information specific to this event.</p>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr valign="top">
+            <th width="50%">Property</th>
+            <th width="50%">Description</th>
+          </tr>
+          <tr VALIGN="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPInvitationEventArgs.Accept.html">Accept</a>
+            </td>
+            <td width="50%"> Defines if the transfer is accepted. This must be set by the client programmer in a event handler. By default this property is set to false, which means the invitation is rejected. If this property is set to true, the invitation is accepted. </td>
+          </tr>
+          <tr VALIGN="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPInvitationEventArgs.Filename.html">Filename</a>
+            </td>
+            <td width="50%"> Name of the file the remote contact wants to send. Only available in case of a filetransfer session. </td>
+          </tr>
+          <tr VALIGN="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPInvitationEventArgs.FileSize.html">FileSize</a>
+            </td>
+            <td width="50%"> The total size of the file in bytes. Only available in case of a filetransfer session. </td>
+          </tr>
+          <tr VALIGN="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPInvitationEventArgs.InvitationMessage.html">InvitationMessage</a>
+            </td>
+            <td width="50%"> The affected transfer session </td>
+          </tr>
+          <tr VALIGN="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPInvitationEventArgs.MSNObject.html">MSNObject</a>
+            </td>
+            <td width="50%"> The corresponding msnobject defined in the invitation. Only available in case of an msn object transfer (image display, emoticons). </td>
+          </tr>
+          <tr VALIGN="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPInvitationEventArgs.TransferProperties.html">TransferProperties</a>
+            </td>
+            <td width="50%"> The affected transfer session </td>
+          </tr>
+          <tr VALIGN="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPInvitationEventArgs.TransferSession.html">TransferSession</a>
+            </td>
+            <td width="50%"> The p2p transfer session that will transfer the session data </td>
+          </tr>
+        </table>
+      </div>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="XihSolutions.DotMSN.Messenger.html">Messenger Class</a> | <a href="XihSolutions.DotMSN.html">XihSolutions.DotMSN Namespace</a></p>
+      <object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext="true" style="display: none;">
+        <param name="Keyword" value="TransferInvitationReceived event">
+        </param>
+        <param name="Keyword" value="TransferInvitationReceived event, Messenger class">
+        </param>
+        <param name="Keyword" value="Messenger.TransferInvitationReceived event">
+        </param>
+      </object>
+      <hr />
+      <div id="footer">
+        <p>
+          <a>Copyright 2002-2006 Xih Solutions</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

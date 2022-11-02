@@ -1,0 +1,118 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>MSNSLPHandler Members</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">DotMSN</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">MSNSLPHandler Members
+					</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p>
+        <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.html">MSNSLPHandler overview</a>
+      </p>
+      <h4 class="dtH4">Public Static (Shared) Fields</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><img src="static.gif" /><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.FileTransferGuid.html">FileTransferGuid</a></td><td width="50%"> The guid used in invitations for a filetransfer. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubfield.gif"></img><img src="static.gif" /><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.UserDisplayGuid.html">UserDisplayGuid</a></td><td width="50%"> The guid used in invitations for a user display transfer. </td></tr></table>
+      </div>
+      <h4 class="dtH4">Public Instance Properties</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.ExternalEndPoint.html">ExternalEndPoint</a></td><td width="50%"> The client end-point as perceived by the server. This can differ from the actual local endpoint through the use of routers. This value is used to determine how to set-up a direct connection. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.LocalEndPoint.html">LocalEndPoint</a></td><td width="50%"> The client's local end-point. This can differ from the external endpoint through the use of routers. This value is used to determine how to set-up a direct connection. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.MessageProcessor.html">MessageProcessor</a></td><td width="50%"> The message processor to send outgoing p2p messages to. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.MessageSession.html">MessageSession</a></td><td width="50%"> The message session to send message to. This is simply the MessageProcessor property, but explicitly casted as a P2PMessageSession. </td></tr></table>
+      </div>
+      <h4 class="dtH4">Public Instance Methods</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.CloseAllSessions.html">CloseAllSessions</a></td><td width="50%"> Closes all sessions by sending the remote client a closing message for each session available. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.Dispose.html">Dispose</a></td><td width="50%"> Closes all sessions. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassEqualsTopic.htm">Equals</a> (inherited from <b>Object</b>)</td><td width="50%">Determines whether the specified <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> is equal to the current <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a>.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassGetHashCodeTopic.htm">GetHashCode</a> (inherited from <b>Object</b>)</td><td width="50%">Serves as a hash function for a particular type. <b>GetHashCode</b> is suitable for use in hashing algorithms and data structures like a hash table.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassGetTypeTopic.htm">GetType</a> (inherited from <b>Object</b>)</td><td width="50%">Gets the <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemTypeClassTopic.htm">Type</a> of the current instance.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.HandleMessage.html">HandleMessage</a></td><td width="50%"> Handles incoming P2P Messages by extracting the inner contents and converting it to a MSNSLP Message. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.SendInvitation_overloads.html">SendInvitation</a></td><td width="50%">Overloaded.  Sends the remote contact a request for the given context. The invitation message is send over the current MessageProcessor. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassToStringTopic.htm">ToString</a> (inherited from <b>Object</b>)</td><td width="50%">Returns a <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemStringClassTopic.htm">String</a> that represents the current <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a>.</td></tr></table>
+      </div>
+      <h4 class="dtH4">Public Instance Events</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubevent.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.TransferInvitationReceived.html">TransferInvitationReceived</a></td><td width="50%"> Occurs when a remote client has send an invitation for a transfer session. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubevent.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.TransferSessionClosed.html">TransferSessionClosed</a></td><td width="50%"> Occurs when a transfer session is closed. Either because the transfer has finished or aborted. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubevent.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.TransferSessionCreated.html">TransferSessionCreated</a></td><td width="50%"> Occurs when a transfer session is created. </td></tr></table>
+      </div>
+      <h4 class="dtH4">Protected Instance Constructors</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr VALIGN="top">
+            <td width="50%">
+              <img src="protmethod.gif" />
+              <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandlerConstructor.html">MSNSLPHandler Constructor</a>
+            </td>
+            <td width="50%"> Constructor. </td>
+          </tr>
+        </table>
+      </div>
+      <h4 class="dtH4">Protected Instance Methods</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.CreateAcceptanceMessage.html">CreateAcceptanceMessage</a></td><td width="50%"> Creates a 200 OK message. This is called by the handler after the client-programmer has accepted the invitation. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.CreateClosingMessage.html">CreateClosingMessage</a></td><td width="50%"> Creates a message which is send directly after the last data message. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.CreateDeclineMessage.html">CreateDeclineMessage</a></td><td width="50%"> Creates a 603 Decline message. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.CreateHandshakeMessage.html">CreateHandshakeMessage</a></td><td width="50%"> Creates the handshake message to send in a direct connection. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassFinalizeTopic.htm">Finalize</a> (inherited from <b>Object</b>)</td><td width="50%">Allows an <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> to attempt to free resources and perform other cleanup operations before the <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> is reclaimed by garbage collection.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.GetNextDirectConnectionPort.html">GetNextDirectConnectionPort</a></td><td width="50%"> Returns a port number which can be used to listen for a new direct connection. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.GetTransferProperties.html">GetTransferProperties</a></td><td width="50%"> Returns the MSNSLPTransferProperties object associated with the specified call id. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassMemberwiseCloneTopic.htm">MemberwiseClone</a> (inherited from <b>Object</b>)</td><td width="50%">Creates a shallow copy of the current <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a>.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.OnDCRequest.html">OnDCRequest</a></td><td width="50%"> Called when the remote client sends a file and sends us it's direct-connect capabilities. A reply will be send with the local client's connectivity. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.OnDCResponse.html">OnDCResponse</a></td><td width="50%"> Called when the remote client send us it's direct-connect capabilities </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.OnSessionCloseRequest.html">OnSessionCloseRequest</a></td><td width="50%"> Called when a remote client closes a session. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.OnSessionRequest.html">OnSessionRequest</a></td><td width="50%"> Called when a remote client request a session </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.OnTransferInvitationReceived.html">OnTransferInvitationReceived</a></td><td width="50%"> Fires the TransferInvitationReceived event. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.OnTransferSessionClosed.html">OnTransferSessionClosed</a></td><td width="50%"> Fires the TransferSessionClosed event. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.OnTransferSessionCreated.html">OnTransferSessionCreated</a></td><td width="50%"> Fires the TransferSessionCreated event and registers event handlers. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.ParseInvitationMessage.html">ParseInvitationMessage</a></td><td width="50%"> Parses the incoming invitation message. This will set the class's properties for later retrieval in following messages. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.RemoveTransferSession.html">RemoveTransferSession</a></td><td width="50%"> Closes the session's datastream and removes the transfer sessions from the class' <a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.html">P2PMessageSession</a> object (MessageProcessor property). </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.SendDCInvitation.html">SendDCInvitation</a></td><td width="50%"> Sends the invitation request for a direct connection </td></tr></table>
+      </div>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler.html">MSNSLPHandler Class</a> | <a href="XihSolutions.DotMSN.DataTransfer.html">XihSolutions.DotMSN.DataTransfer Namespace</a></p>
+      <object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext="true" style="display: none;">
+        <param name="Keyword" value="MSNSLPHandler class">
+        </param>
+        <param name="Keyword" value="XihSolutions.DotMSN.DataTransfer.MSNSLPHandler class">
+        </param>
+        <param name="Keyword" value="MSNSLPHandler class, all members">
+        </param>
+      </object>
+      <hr />
+      <div id="footer">
+        <p>
+          <a>Copyright 2002-2006 Xih Solutions</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

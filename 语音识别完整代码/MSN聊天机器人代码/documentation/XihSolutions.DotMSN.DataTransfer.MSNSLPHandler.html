@@ -1,0 +1,69 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>MSNSLPHandler Class</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">DotMSN</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">MSNSLPHandler Class</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> Handles invitations and requests for file transfers, emoticons, user displays and other msn objects. </p>
+      <p>For a list of all members of this type, see <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandlerMembers.html">MSNSLPHandler Members</a>.</p>
+      <p>
+        <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">System.Object</a>
+        <br />   <b>XihSolutions.DotMSN.DataTransfer.MSNSLPHandler</b></p>
+      <div class="syntax">
+        <span class="lang">[Visual Basic]</span>
+        <br />Public Class MSNSLPHandler<div>    Implements <a href="XihSolutions.DotMSN.Core.IMessageHandler.html">IMessageHandler</a>, <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemIDisposableClassTopic.htm">IDisposable</a></div></div>
+      <div class="syntax">
+        <span class="lang">[C#]</span>
+        <div>public class MSNSLPHandler<b> : <a href="XihSolutions.DotMSN.Core.IMessageHandler.html">IMessageHandler</a>, <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemIDisposableClassTopic.htm">IDisposable</a></b></div>
+      </div>
+      <H4 class="dtH4">Thread Safety</H4>
+      <P>Public static (<b>Shared</b> in Visual Basic) members of this type are 
+				safe for multithreaded operations. Instance members are <b>not</b> guaranteed to be 
+				thread-safe.</P>
+      <h4 class="dtH4">Remarks</h4>
+      <p> MSNSLPHandler is responsible for communicating with the remote client about the transfer properties. This means receiving and sending details about filelength, filename, user display context, etc. When an invitation request is received the client programmer is asked to accept or decline the invitation. This is done through the TransferInvitationReceived event. The client programmer must handle this event and set the Accept and DataStream property in the event argument, see <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPInvitationEventArgs.html">MSNSLPInvitationEventArgs</a>. When the receiver of the invitation has accepted a <a href="XihSolutions.DotMSN.DataTransfer.P2PTransferSession.html">P2PTransferSession</a> is created and used to actually send the data. In the case of user displays or other msn objects the data transfer always goes over the switchboard. In case of a file transfer there will be negotiating about the direct connection to setup. Depending on the connectivity of both clients, a request for a direct connection is send to associated the <b>P2PTransferSession</b> object. </p>
+      <h4 class="dtH4">Requirements</h4>
+      <p>
+        <b>Namespace: </b>
+        <a href="XihSolutions.DotMSN.DataTransfer.html">XihSolutions.DotMSN.DataTransfer</a>
+      </p>
+      <p>
+        <b>Assembly: </b>XihSolutions.DotMSN (in XihSolutions.DotMSN.dll)
+					</p>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="XihSolutions.DotMSN.DataTransfer.MSNSLPHandlerMembers.html">MSNSLPHandler Members</a> | <a href="XihSolutions.DotMSN.DataTransfer.html">XihSolutions.DotMSN.DataTransfer Namespace</a></p>
+      <object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext="true" style="display: none;">
+        <param name="Keyword" value="MSNSLPHandler class, about MSNSLPHandler class">
+        </param>
+      </object>
+      <hr />
+      <div id="footer">
+        <p>
+          <a>Copyright 2002-2006 Xih Solutions</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

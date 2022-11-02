@@ -1,0 +1,5 @@
+When compiled executable, it can be used as key generator.
+
+./genpair <pair-name>
+
+will produce <pair-name>.pk and <pair-name>.sk which are public and private key respectively

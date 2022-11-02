@@ -1,0 +1,109 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>IMessageProcessor Interface</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">DotMSN</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">IMessageProcessor Interface</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> Defines methods to send network messages. </p>
+      <p>For a list of all members of this type, see <a href="XihSolutions.DotMSN.Core.IMessageProcessorMembers.html">IMessageProcessor Members</a>.</p>
+      <p>
+      </p>
+      <div class="syntax">
+        <span class="lang">[Visual Basic]</span>
+        <br />Public Interface IMessageProcessor</div>
+      <div class="syntax">
+        <span class="lang">[C#]</span>
+        <div>public interface IMessageProcessor</div>
+      </div>
+      <h4 class="dtH4">Types that implement IMessageProcessor</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr valign="top">
+            <th width="50%">Type</th>
+            <th width="50%">Description</th>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.html">SocketMessageProcessor</a>
+            </td>
+            <td width="50%"> Processes I/O of network message through a network connection. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.DataTransfer.P2PDirectProcessor.html">P2PDirectProcessor</a>
+            </td>
+            <td width="50%"> Handles the direct connections in P2P sessions. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.html">P2PMessageSession</a>
+            </td>
+            <td width="50%"> P2PMessageSession routes all messages in the p2p framework between the local client and a single remote client. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.DataTransfer.P2PTransferSession.html">P2PTransferSession</a>
+            </td>
+            <td width="50%"> A single transfer of data within a p2p session. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.NSMessageProcessor.html">NSMessageProcessor</a>
+            </td>
+            <td width="50%"> Handles the I/O of the Notification Server. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.SBMessageProcessor.html">SBMessageProcessor</a>
+            </td>
+            <td width="50%"> Handles the I/O of the switchboard server. </td>
+          </tr>
+        </table>
+      </div>
+      <h4 class="dtH4">Remarks</h4>
+      <p> IMessageProcessor is the abstraction of an object which can send network messages. Network messages can be any kind of messages: text messages, data messages. By using this interface a de-coupling is established between the handling of messages and the I/O of messages. IMessageProcessor is mostly used internal. </p>
+      <h4 class="dtH4">Requirements</h4>
+      <p>
+        <b>Namespace: </b>
+        <a href="XihSolutions.DotMSN.Core.html">XihSolutions.DotMSN.Core</a>
+      </p>
+      <p>
+        <b>Assembly: </b>XihSolutions.DotMSN (in XihSolutions.DotMSN.dll)
+					</p>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="XihSolutions.DotMSN.Core.IMessageProcessorMembers.html">IMessageProcessor Members</a> | <a href="XihSolutions.DotMSN.Core.html">XihSolutions.DotMSN.Core Namespace</a></p>
+      <object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext="true" style="display: none;">
+        <param name="Keyword" value="IMessageProcessor interface, about IMessageProcessor interface">
+        </param>
+      </object>
+      <hr />
+      <div id="footer">
+        <p>
+          <a>Copyright 2002-2006 Xih Solutions</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

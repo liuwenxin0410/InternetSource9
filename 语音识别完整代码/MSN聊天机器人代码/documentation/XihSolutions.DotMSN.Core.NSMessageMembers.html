@@ -1,0 +1,98 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>NSMessage Members</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">DotMSN</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">NSMessage Members
+					</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p>
+        <a href="XihSolutions.DotMSN.Core.NSMessage.html">NSMessage overview</a>
+      </p>
+      <h4 class="dtH4">Public Instance Constructors</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr VALIGN="top">
+            <td width="50%">
+              <img src="pubmethod.gif" />
+              <a href="XihSolutions.DotMSN.Core.NSMessageConstructor.html">NSMessage</a>
+            </td>
+            <td width="50%">Overloaded. Initializes a new instance of the NSMessage class.</td>
+          </tr>
+        </table>
+      </div>
+      <h4 class="dtH4">Public Instance Properties</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.Core.MSNMessage.Acknowledgement.html">Acknowledgement</a> (inherited from <b>MSNMessage</b>)</td><td width="50%"> Acknowledgement </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.Core.MSNMessage.Command.html">Command</a> (inherited from <b>MSNMessage</b>)</td><td width="50%"> The command name. This is always a string composed of 3 characters. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.Core.MSNMessage.CommandValues.html">CommandValues</a> (inherited from <b>MSNMessage</b>)</td><td width="50%"> A list of all values after the initial command string. The values are all stored as strings. After construction this is an empty list. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.Core.NetworkMessage.InnerBody.html">InnerBody</a> (inherited from <b>NetworkMessage</b>)</td><td width="50%"> The inner body contents. Null if not present. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.Core.NetworkMessage.InnerMessage.html">InnerMessage</a> (inherited from <b>NetworkMessage</b>)</td><td width="50%"> The inner message object. Null if not present. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.Core.NetworkMessage.ParentMessage.html">ParentMessage</a> (inherited from <b>NetworkMessage</b>)</td><td width="50%"> The inner message object. Null if not present. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubproperty.gif"></img><a href="XihSolutions.DotMSN.Core.MSNMessage.TransactionID.html">TransactionID</a> (inherited from <b>MSNMessage</b>)</td><td width="50%"> The transaction identifier of this message. Only valid when the message is received from the notification server. </td></tr></table>
+      </div>
+      <h4 class="dtH4">Public Instance Methods</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.Core.NetworkMessage.AppendArray.html">AppendArray</a> (inherited from <b>NetworkMessage</b>)</td><td width="50%"> Helper method. Appends one array to the other. The second parameter, appendingArray, can be null. In that case the original byte array is returned and no copy is made. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.Core.NetworkMessage.CreateFromMessage.html">CreateFromMessage</a> (inherited from <b>NetworkMessage</b>)</td><td width="50%"> Creates the networkmessage based on the inner contents of the parent message. It invokes the <a href="XihSolutions.DotMSN.Core.NetworkMessage.ParseBytes.html">ParseBytes</a> method to parse the inner body contents of the parent message. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassEqualsTopic.htm">Equals</a> (inherited from <b>Object</b>)</td><td width="50%">Determines whether the specified <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> is equal to the current <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a>.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.Core.NSMessage.GetBytes.html">GetBytes</a></td><td width="50%"> Returns the NS message as a byte array. This can be directly send over a networkconnection. Remember to set the transaction ID before calling this method. Uses UTF8 Encoding. No MSG commands can be send to the NS, and is therefore not supported by this function. This function will add a \r\n at the end of the string, with the exception of a QRY command. Which does not work with a trailing \r\n. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassGetHashCodeTopic.htm">GetHashCode</a> (inherited from <b>Object</b>)</td><td width="50%">Serves as a hash function for a particular type. <b>GetHashCode</b> is suitable for use in hashing algorithms and data structures like a hash table.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassGetTypeTopic.htm">GetType</a> (inherited from <b>Object</b>)</td><td width="50%">Gets the <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemTypeClassTopic.htm">Type</a> of the current instance.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.Core.MSNMessage.ParseBytes.html">ParseBytes</a> (inherited from <b>MSNMessage</b>)</td><td width="50%"> Parses incoming byte data send from the network. This will set the command values and other properties of the class, depending on the message. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.Core.MSNMessage.PrepareMessage.html">PrepareMessage</a> (inherited from <b>MSNMessage</b>)</td><td width="50%"> Clears the Command and CommandValues when an innermessage is set. So the innermessage can set these properties. </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.Core.MSNMessage.ToDebugString.html">ToDebugString</a> (inherited from <b>MSNMessage</b>)</td><td width="50%">
+            </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="pubmethod.gif"></img><a href="XihSolutions.DotMSN.Core.MSNMessage.ToString.html">ToString</a> (inherited from <b>MSNMessage</b>)</td><td width="50%">
+            </td></tr></table>
+      </div>
+      <h4 class="dtH4">Protected Instance Methods</h4>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassFinalizeTopic.htm">Finalize</a> (inherited from <b>Object</b>)</td><td width="50%">Allows an <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> to attempt to free resources and perform other cleanup operations before the <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a> is reclaimed by garbage collection.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassMemberwiseCloneTopic.htm">MemberwiseClone</a> (inherited from <b>Object</b>)</td><td width="50%">Creates a shallow copy of the current <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemObjectClassTopic.htm">Object</a>.</td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.Core.NetworkMessage.OnInnerMessageSet.html">OnInnerMessageSet</a> (inherited from <b>NetworkMessage</b>)</td><td width="50%"> Called when the innermessage property is set. This sets the ParentMessage property on the inner message object </td></tr>
+<tr VALIGN="top"><td width="50%"><img src="protmethod.gif"></img><a href="XihSolutions.DotMSN.Core.NetworkMessage.OnParentMessageSet.html">OnParentMessageSet</a> (inherited from <b>NetworkMessage</b>)</td><td width="50%"> Called when the parent message is set. This sets the InnerMessage property on the parent message object. </td></tr></table>
+      </div>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="XihSolutions.DotMSN.Core.NSMessage.html">NSMessage Class</a> | <a href="XihSolutions.DotMSN.Core.html">XihSolutions.DotMSN.Core Namespace</a></p>
+      <object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext="true" style="display: none;">
+        <param name="Keyword" value="NSMessage class">
+        </param>
+        <param name="Keyword" value="XihSolutions.DotMSN.Core.NSMessage class">
+        </param>
+        <param name="Keyword" value="NSMessage class, all members">
+        </param>
+      </object>
+      <hr />
+      <div id="footer">
+        <p>
+          <a>Copyright 2002-2006 Xih Solutions</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

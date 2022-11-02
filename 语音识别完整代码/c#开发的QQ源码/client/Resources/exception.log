@@ -1,0 +1,40 @@
+#######################################
+message:值不能为空。
+参数名: type
+Source:mscorlib
+StackTrace:   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at gowk.controls.GRichTextBox.InsertImage(String imageFile) in C:\Documents and Settings\admin\桌面\gowk\controls\GRichTextBox.cs:line 80
+   at gowk.forms.GRichTextBoxEX.btninsertimage_Click(Object sender, EventArgs e)
+InnerException:
+#######################################
+#######################################
+message:值不能为空。
+参数名: type
+Source:mscorlib
+StackTrace:   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at gowk.controls.GRichTextBox.InsertImage(String imageFile) in C:\Documents and Settings\admin\桌面\gowk\controls\GRichTextBox.cs:line 80
+   at gowk.forms.GRichTextBoxEX.btnemotion_Click(Object sender, EventArgs e)
+InnerException:
+#######################################
+#######################################
+message:值不能为空。
+参数名: type
+Source:mscorlib
+StackTrace:   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at gowk.controls.GRichTextBox.InsertImage(String imageFile) in C:\Documents and Settings\admin\桌面\gowk\controls\GRichTextBox.cs:line 80
+   at gowk.forms.GRichTextBoxEX.btnemotion_Click(Object sender, EventArgs e)
+InnerException:
+#######################################
+#######################################
+message:值不能为空。
+参数名: type
+Source:mscorlib
+StackTrace:   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at gowk.controls.GRichTextBox.InsertImage(String imageFile) in C:\Documents and Settings\admin\桌面\gowk\controls\GRichTextBox.cs:line 80
+   at gowk.forms.GRichTextBoxEX.btnemotion_Click(Object sender, EventArgs e)
+InnerException:
+#######################################

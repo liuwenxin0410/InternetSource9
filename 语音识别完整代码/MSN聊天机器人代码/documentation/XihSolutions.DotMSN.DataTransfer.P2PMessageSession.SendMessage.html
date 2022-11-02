@@ -1,0 +1,67 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>P2PMessageSession.SendMessage Method</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">DotMSN</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">P2PMessageSession.SendMessage Method </h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p> Sends incoming p2p messages to the remote contact. </p>
+      <div class="syntax">
+        <span class="lang">[Visual Basic]</span>
+        <br />NotOverridable Public Sub SendMessage( _<br />   ByVal <i>message</i> As <a href="XihSolutions.DotMSN.Core.NetworkMessage.html">NetworkMessage</a> _<br />) _<div>    Implements <a href="XihSolutions.DotMSN.Core.IMessageProcessor.SendMessage.html">IMessageProcessor.SendMessage</a></div></div>
+      <div class="syntax">
+        <span class="lang">[C#]</span>
+        <br />public <a href="ms-help://MS.NETFrameworkSDKv1.1/cpref/html/frlrfSystemVoidClassTopic.htm">void</a> SendMessage(<br />   <a href="XihSolutions.DotMSN.Core.NetworkMessage.html">NetworkMessage</a> <i>message</i><br />);</div>
+      <h4 class="dtH4">Parameters</h4>
+      <dl>
+        <dt>
+          <i>message</i>
+        </dt>
+        <dd>The P2PMessage to send to the remote contact.</dd>
+      </dl>
+      <h4 class="dtH4">Implements</h4>
+      <p>
+        <a href="XihSolutions.DotMSN.Core.IMessageProcessor.SendMessage.html">IMessageProcessor.SendMessage</a>
+      </p>
+      <h4 class="dtH4">Remarks</h4>
+      <p> Before the message is send a couple of things are checked. If there is no identifier available, the local identifier will be increased by one and set as the message identifier. Second, if the acknowledgement identifier is not set it will be set to a random value. After this the method will check for the total length of the message. If the total length is too large, the message will be splitted into multiple messages. The maximum size for p2p messages over a switchboard is 1202 bytes. The maximum size for p2p messages over a direct connection is 1352 bytes. As a result the length of the splitted messages will be 1202 or 1352 bytes or smaller, depending on the availability of a direct connection. If a direct connection is available the message is wrapped in a <a href="XihSolutions.DotMSN.DataTransfer.P2PDCMessage.html">P2PDCMessage</a> object and send over the direct connection. Otherwise it will be send over a switchboard session. If there is no switchboard session available, or it has become invalid, a new switchboard session will be requested by asking this to the nameserver handler. Messages will be buffered until a switchboard session, or a direct connection, becomes available. Upon a new connection the buffered messages are directly send to the remote contact over the new connection. </p>
+      <h4 class="dtH4">See Also</h4>
+      <p>
+        <a href="XihSolutions.DotMSN.DataTransfer.P2PMessageSession.html">P2PMessageSession Class</a> | <a href="XihSolutions.DotMSN.DataTransfer.html">XihSolutions.DotMSN.DataTransfer Namespace</a></p>
+      <object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext="true" style="display: none;">
+        <param name="Keyword" value="SendMessage method">
+        </param>
+        <param name="Keyword" value="SendMessage method, P2PMessageSession class">
+        </param>
+        <param name="Keyword" value="P2PMessageSession.SendMessage method">
+        </param>
+      </object>
+      <hr />
+      <div id="footer">
+        <p>
+          <a>Copyright 2002-2006 Xih Solutions</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

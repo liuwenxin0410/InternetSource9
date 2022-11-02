@@ -1,0 +1,795 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ControlVault.MenuSuite</name>
+    </assembly>
+    <members>
+        <member name="T:ControlVault.MenuSuite.BaseMenuPainter">
+            <summary>
+            Base component for MenuPainter implementations
+            </summary>
+        </member>
+        <member name="T:ControlVault.MenuSuite.IMenuPainter">
+            <summary>
+            Interface used by <see cref="T:ControlVault.MenuSuite.MenuEx"/> to allow attachment of menu painters.
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.IMenuPainter.PaintBar(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Paints the menu bar
+            </summary>		
+            <param name="g">A <see cref="T:System.Drawing.Graphics"/> object on which to paint.</param>
+            <param name="r">The bounding <see cref="T:System.Drawing.Rectangle"/> for the paint operation.</param>
+            <remarks>This method will only be called when both these items are non- null.</remarks>
+        </member>
+        <member name="M:ControlVault.MenuSuite.IMenuPainter.PaintItem(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Drawing.Image,ControlVault.MenuSuite.MenuImageSize)">
+            <summary>
+            Paints a <see cref="T:System.Windows.Forms.MenuItem"/>
+            </summary>
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/> to paint.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for the paint action.</param>
+            <param name="image">An <see cref="T:System.Drawing.Image"/> associated with the MenuItem. Note that this may be null.</param>
+            <param name="imageSize">A <see cref="T:ControlVault.MenuSuite.MenuImageSize"/> associated with the MenuItem. This indicates the desired size of the image.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.IMenuPainter.MeasureItem(System.Windows.Forms.MenuItem,System.Windows.Forms.MeasureItemEventArgs,ControlVault.MenuSuite.MenuImageSize)">
+            <summary>
+            Measures a <see cref="T:System.Windows.Forms.MenuItem"/> object prior to painting it.
+            </summary>
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/> to measure.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.MeasureItemEventArgs"/> object providing data for the measure action.</param>
+            <param name="imageSize">A <see cref="T:ControlVault.MenuSuite.MenuImageSize"/> associated with the MenuItem. This indicates the desired size of the image.</param>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.CHECK_SIZE">
+            <summary>
+            Size of the Check Box area on a menu item
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.MENU_SEPARATOR_HEIGHT">
+            <summary>
+            Height of a MenuItem separator
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.MENU_BORDER_SIZE">
+            <summary>
+            Buffer to add to a MenuItem height
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.IMAGE_BUFFER">
+            <summary>
+            Buffer around a menu item image
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.SHORTCUT_BUFFER">
+            <summary>
+            Buffer to the left of a shortcut
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.SHORTCUT_RIGHT_BUFFER">
+            <summary>
+            Buffer to the right of a shortcut
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.TOPLEVEL_MENU_BUFFER">
+            <summary>
+            Buffer after a top-level menu item
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.TEXT_LEFT_BUFFER">
+            <summary>
+            Buffer to the left of menu item text
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.SMALL_IMAGE_SIZE">
+            <summary>
+            Menu image size for small images
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.MEDIUM_IMAGE_SIZE">
+            <summary>
+            Menu image size for medium images
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.LARGE_IMAGE_SIZE">
+            <summary>
+            Menu image size for large images
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.EXTRA_LARGE_IMAGE_SIZE">
+            <summary>
+            Menu image size for extra-large images.
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.stringFormat">
+            <summary>
+            <see cref="T:System.Drawing.StringFormat"/> object used to calculate menu sizes.
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.checkImage">
+            <summary>
+            The <see cref="T:System.Drawing.Image"/> used to draw the 'Check' for a checked menu item.
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BaseMenuPainter.radioCheckImage">
+            <summary>
+            The <see cref="T:System.Drawing.Image"/> used to draw the 'Radio Check' for a checked menu item.
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the BaseMenuPainter class.
+            </summary>
+            <param name="container">The <see cref="T:System.ComponentModel.IContainer"/> to which this component is to be added.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.#ctor">
+            <summary>
+            Initializes a new instance of the BaseMenuPainter class.
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.Initialize">
+            <summary>
+            Initializes the stringFormat and checkImage variables.
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.GetResourceStream(System.String)">
+            <summary>
+            Returns a stream containing the specified icon resource
+            </summary>
+            <param name="iconName">A <see cref="T:System.String"/> containing the icon name.</param>
+            <returns>A <see cref="T:System.IO.Stream"/> containing the resource.</returns>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.GetImageHeight(ControlVault.MenuSuite.MenuImageSize)">
+            <summary>
+            Converts a <see cref="T:ControlVault.MenuSuite.MenuImageSize"/> value to an appropriate integer value.
+            </summary>
+            <param name="imageSize">A <see cref="T:ControlVault.MenuSuite.MenuImageSize"/> value to convert.</param>
+            <returns>An <see cref="T:System.Int32"/> value giving the image size.</returns>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.InternalPaintItem(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Drawing.Image,ControlVault.MenuSuite.MenuImageSize)">
+            <summary>
+            Implementation of the IMenuPainter Paint method. 
+            </summary>		
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/> to be painted.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this event.</param>
+            <param name="image">An <see cref="T:System.Drawing.Image"/> to draw in the menu item. This may be null.</param>
+            <param name="imageSize">An <see cref="T:ControlVault.MenuSuite.MenuImageSize"/> associated with the MenuItem. This indicates how large the icons are.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.InternalMeasureItem(System.Windows.Forms.MenuItem,System.Windows.Forms.MeasureItemEventArgs,ControlVault.MenuSuite.MenuImageSize)">
+            <summary>
+            Implementation of the IMenuPainter Measure method. 
+            </summary>		
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/> to be painted.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.MeasureItemEventArgs"/> object providing data for this event.</param>		
+            <param name="imageSize">A <see cref="T:ControlVault.MenuSuite.MenuImageSize"/> associated with the MenuItem. This indicates the size of the image.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.InternalPaintBar(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Paints the menu bar background
+            </summary>
+            <param name="g">A <see cref="T:System.Drawing.Graphics"/> object to use when painting the background.</param>
+            <param name="r">The bounding <see cref="T:System.Drawing.Rectangle"/> for the paint operation</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.CalculateItemHeight(System.Windows.Forms.MenuItem,ControlVault.MenuSuite.MenuImageSize)">
+            <summary>		
+            Calculates the height of a <see cref="T:System.Windows.Forms.MenuItem"/>
+            </summary>
+            <param name="item">A <see cref="T:System.Windows.Forms.MenuItem"/> for which the size is required.</param>
+            <param name="imageSize">A <see cref="T:ControlVault.MenuSuite.MenuImageSize"/> value indicating the size of the images.</param>
+            <returns>An <see cref="T:System.Int32"/> value containing the calculated height of the menu item.</returns>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.GetTextColor">
+            <summary>
+            Gets the <see cref="T:System.Drawing.Color"/> to be used to paint normal menu text.
+            </summary>
+            <returns>A <see cref="T:System.Drawing.Color"/> to be used when painting text</returns>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.PaintMenuBar(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Paints the menu bar background
+            </summary>
+            <param name="g">A <see cref="T:System.Drawing.Graphics"/> object to use when painting the background.</param>
+            <param name="r">The bounding <see cref="T:System.Drawing.Rectangle"/> for the paint operation</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.GetShortcutText(System.Windows.Forms.MenuItem)">
+            <summary>
+            Gets the shortcut text for a MenuItem
+            </summary>
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/> for which a shortcut is required.</param>
+            <returns>A <see cref="T:System.String"/> containing the shortcut text.</returns>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.MeasureMenuItem(System.Windows.Forms.MenuItem,System.Windows.Forms.MeasureItemEventArgs,ControlVault.MenuSuite.MenuImageSize)">
+            <summary>
+            Implementation of the IMenuPainter Measure method. 
+            </summary>		
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/> to be painted.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.MeasureItemEventArgs"/> object providing data for this event.</param>		
+            <param name="imageSize">A <see cref="T:ControlVault.MenuSuite.MenuImageSize"/> associated with the MenuItem. This indicates the size of the image.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.CalculateItemWidth(System.Windows.Forms.MenuItem,System.Drawing.Graphics,System.Boolean,System.Boolean,System.Int32)">
+            <summary>		
+            Calculates the width of a <see cref="T:System.Windows.Forms.MenuItem"/>
+            </summary>
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/> for which the height is required.</param>
+            <param name="g">A <see cref="T:System.Drawing.Graphics"/> object used to measure the string size</param>
+            <param name="showImages">A <see cref="T:System.Boolean"/> value indicating whether to show images.</param>
+            <param name="topLevel">A <see cref="T:System.Boolean"/> value indicating whether this is a top level menu.</param>
+            <param name="imageWidth">A <see cref="T:System.Int32"/> value indicating the size of the images in the menu.</param>
+            <returns>An <see cref="T:System.Int32"/> value containing the calculated height of the menu item.</returns>				
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.PaintBackground(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)">
+            <summary>
+            Paints the background of a <see cref="T:System.Windows.Forms.MenuItem"/> object.
+            </summary>
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/>  to paint.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this operation.</param>
+            <param name="TopLevel">A <see cref="T:System.Boolean"/> indicating whether this is a top level menu item.</param>
+            <param name="imageSize">An <see cref="T:System.Int32"/> associated with the MenuItem. This indicates the size of the image.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.PaintHighlight(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean)">
+            <summary>
+            Paints the background of a highlighted <see cref="T:System.Windows.Forms.MenuItem"/> object.
+            </summary>
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/>  to paint.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this operation.</param>
+            <param name="TopLevel">A <see cref="T:System.Boolean"/> indicating whether this is a top level menu item.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.PaintImage(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Drawing.Image,System.Int32)">
+            <summary>
+            Paints the image on a <see cref="T:System.Windows.Forms.MenuItem"/> object.
+            </summary>
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/>  to paint.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this operation.</param>
+            <param name="image">The <see cref="T:System.Drawing.Image"/> to draw on the Menu</param>
+            <param name="imageSize">An <see cref="T:System.Int32"/> giving the image size to use when painting menus.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.PaintText(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Int32)">
+            <summary>
+            Paints the Menu Text of a <see cref="T:System.Windows.Forms.MenuItem"/> object.
+            </summary>
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/>  to paint.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this operation.</param>
+            <param name="imageSize">An <see cref="T:System.Int32"/> value indicating the size of the images drawn when painting menus.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.PaintSeparator(System.Windows.Forms.DrawItemEventArgs,System.Int32)">
+            <summary>
+            Paints separator bars
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this operation.</param>
+            <param name="imageSize">An <see cref="T:System.Int32"/> value indicating the size of menu images.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.PaintShortcut(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs)">
+            <summary>
+            Paints the Menu Shortcut of a <see cref="T:System.Windows.Forms.MenuItem"/> object.
+            </summary>
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/>  to paint.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this operation.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.PaintCheck(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)">
+            <summary>
+            Paints the Checked portion of a <see cref="T:System.Windows.Forms.MenuItem"/> object.
+            </summary>
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/>  to paint.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this operation.</param>		
+            <param name="Radio">A <see cref="T:System.Boolean"/> indicating whether this is a RadioButton type check.</param>
+            <param name="imageSize">An <see cref="T:System.Int32"/> containing the desired image size.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.ToString">
+            <summary>
+            Overridden. See <see cref="M:System.Object.ToString"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.PaintBar(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Implementation of the IMenuPainter PaintBar method
+            </summary>
+            <param name="g">The <see cref="T:System.Drawing.Graphics"/> object on which to paint.</param>
+            <param name="r">The bounding <see cref="T:System.Drawing.Rectangle"/> for the paint operation</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.PaintItem(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Drawing.Image,ControlVault.MenuSuite.MenuImageSize)">
+            <summary>
+            Implementation of the IMenuPainter Paint method. 
+            </summary>		
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/> to be painted.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this event.</param>
+            <param name="image">An <see cref="T:System.Drawing.Image"/> to draw in the menu item. This may be null.</param>
+            <param name="imageSize">An <see cref="T:ControlVault.MenuSuite.MenuImageSize"/> associated with the MenuItem. This indicates the size of the image to be drawn.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.MeasureItem(System.Windows.Forms.MenuItem,System.Windows.Forms.MeasureItemEventArgs,ControlVault.MenuSuite.MenuImageSize)">
+            <summary>
+            Implementation of the IMenuPainter Measure method. 
+            </summary>		
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/> to be painted.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.MeasureItemEventArgs"/> object providing data for this event.</param>		
+            <param name="imageSize">An <see cref="T:ControlVault.MenuSuite.MenuImageSize"/> associated with the MenuItem. This indicates the size of the image to be drawn.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.BaseMenuPainter.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ControlVault.MenuSuite.MenuImageSize">
+            <summary>
+            Size of images used in the menu
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.MenuImageSize.None">
+            <summary>
+            The menu does not show images.
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.MenuImageSize.Small">
+            <summary>
+            The menu uses small images (16x16)
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.MenuImageSize.Medium">
+            <summary>
+            The menu uses medium images (24x24)
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.MenuImageSize.Large">
+            <summary>
+            The menu uses large images (32x32)
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.MenuImageSize.ExtraLarge">
+            <summary>
+            The menu uses extra large images (48x48)
+            </summary>
+        </member>
+        <member name="T:ControlVault.MenuSuite.BarGradientStyle">
+            <summary>
+            Enumerated type indicating how to paint bar gradients
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BarGradientStyle.LeftToRight">
+            <summary>
+            Gradient is from left to right.
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.BarGradientStyle.TopToBottom">
+            <summary>
+            Gradient is from top to bottom
+            </summary>
+        </member>
+        <member name="T:ControlVault.MenuSuite.MenuBarStyle">
+            <summary>
+            Indicates how to draw the menu bar
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.MenuBarStyle.Plain">
+            <summary>
+            Draw the menu bar as a single color.
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.MenuBarStyle.Gradient">
+            <summary>
+            Draw the menu bar using a linear gradient.
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.MenuBarStyle.ConvexConcave">
+            <summary>
+            Draw the menu bar using gradients to provide a convex or concave appearance.
+            </summary>
+        </member>
+        <member name="T:ControlVault.MenuSuite.Skin">
+            <summary>
+            Skins used to draw the menu bar
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.Skin.Whites">
+            <summary>
+            Draw the menu bar in a range of whites and greys
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.Skin.Blues">
+            <summary>
+            Draw the menu bar in a range of blue colors
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.Skin.Reds">
+            <summary>
+            Draw the menu bar in a range of red colors
+            </summary>
+        </member>
+        <member name="F:ControlVault.MenuSuite.Skin.Greens">
+            <summary>
+            Draw the menu bar in a range of green colors
+            </summary>
+        </member>
+        <member name="T:ControlVault.MenuSuite.ImageMenuPainter">
+            <summary>
+            A component which implements IMenuPainter in order to transform menus by displaying a background image
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.ImageMenuPainter.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the ImageMenuPainter class.
+            </summary>
+            <param name="container">The <see cref="T:System.ComponentModel.IContainer"/> to which this component is to be added.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.ImageMenuPainter.#ctor">
+            <summary>
+            Initializes a new instance of the ImageMenuPainter class.
+            </summary>		
+        </member>
+        <member name="M:ControlVault.MenuSuite.ImageMenuPainter.PaintMenuBar(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintBar(System.Drawing.Graphics,System.Drawing.Rectangle)"/>
+            </summary>		
+        </member>
+        <member name="M:ControlVault.MenuSuite.ImageMenuPainter.GetTextColor">
+            <summary>
+            Gets the <see cref="T:System.Drawing.Color"/> to be used to paint normal menu text.
+            </summary>
+            <returns>A <see cref="T:System.Drawing.Color"/> to be used when painting text</returns>
+        </member>
+        <member name="M:ControlVault.MenuSuite.ImageMenuPainter.PaintBackground(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintBackground(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.ImageMenuPainter.PaintSeparator(System.Windows.Forms.DrawItemEventArgs,System.Int32)">
+            <summary>
+            Overriden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintSeparator(System.Windows.Forms.DrawItemEventArgs,System.Int32)"/>
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this operation.</param>
+            <param name="imageSize">An <see cref="T:System.Int32"/> containing the desired image size.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.ImageMenuPainter.PaintHighlight(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintHighlight(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.ImageMenuPainter.PaintCheck(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintCheck(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:ControlVault.MenuSuite.ImageMenuPainter.Image">
+            <summary>
+            Gets or sets the image drawn on the background
+            </summary>
+            <value>An <see cref="P:ControlVault.MenuSuite.ImageMenuPainter.Image"/></value>
+        </member>
+        <member name="T:ControlVault.MenuSuite.MenuEx">
+            <summary>
+            Implements custom painting for a Main Menu
+            </summary>	
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the MenuEx class.
+            </summary>
+            <param name="container">The <see cref="T:System.ComponentModel.IContainer"/> to which this component is to be added.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.#ctor">
+            <summary>
+            Initializes a new instance of the MenuEx class.
+            </summary>		
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.CheckForm(System.Windows.Forms.MenuItem)">
+            <summary>
+            Find the <see cref="T:System.Windows.Forms.MainMenu"/> on the owning <see cref="T:System.Windows.Forms.Form"/>. If a MainMenu is found, create the 
+            <see cref="T:System.Drawing.Bitmap"/> used for the painting of the Menu Bar, and attach to the <see cref="E:System.Windows.Forms.Control.Resize"/> event
+            of the Form in order to recreate the bitmap when the form is resized.
+            </summary>
+            <param name="item">A <see cref="T:System.Windows.Forms.MenuItem"/> object, used to find the MainMenu object.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.SetBrush">
+            <summary>
+            Creates a Pattern Brush from the internal barBitmap object, and notifies Windows that this is to be used
+            for painting the Menu Bar
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.RecreateBitmap">
+            <summary>
+            Re-creates the bitmap used for painting the menu bar.
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.form_Resize(System.Object,System.EventArgs)">
+            <summary>
+            Forces re-creation of the Menu Bar bitmap when the form is resized.
+            </summary>
+            <param name="sender">The <see cref="T:System.Object"/> which triggered this event.</param>
+            <param name="e">An <see cref="T:System.EventArgs"/> object providing data for this event.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.MeasureMenuItem(System.Object,System.Windows.Forms.MeasureItemEventArgs)">
+            <summary>
+            Event handler for each MenuItem's MeasureItem event.
+            </summary>
+            <param name="sender">The <see cref="T:System.Object"/> which triggered this event.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.MeasureItemEventArgs"/> object providing data for this event.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.DrawMenuItem(System.Object,System.Windows.Forms.DrawItemEventArgs)">
+            <summary>
+            Event Handler for each MenuItem's DrawItem event;
+            </summary>
+            <param name="sender">The <see cref="T:System.Object"/> which triggered this event.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this event.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.GetImage(System.Windows.Forms.MenuItem)">
+            <summary>
+            Gets the image associated with a MenuItem
+            </summary>
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/> for which the image is required.</param>
+            <returns>An <see cref="T:System.Drawing.Image"/> object</returns>
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.GetImageSize">
+            <summary>
+            Returns an appropriate size for the menu images.
+            </summary>
+            <returns>A <see cref="T:ControlVault.MenuSuite.MenuImageSize"/> value</returns>
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.Dispose(System.Boolean)">
+            <summary> 
+            Cleans up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.RefreshBar">
+            <summary>
+            Forcibly recreates the menu bar bitmap. 
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.CanExtend(System.Object)">
+            <summary>
+            Indicates the type of object for which extended properties are provided.
+            </summary>
+            <param name="extendee">An <see cref="T:System.Object"/> which is to be considered for extended properties.</param>
+            <returns><b>true</b> if the object is to have extended properties, otherwise <b>false</b>.</returns>
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.GetImageIndex(System.ComponentModel.Component)">
+            <summary>
+            Gets the ImageIndex property for a given menuitem
+            </summary>
+            <param name="component">The <see cref="T:System.ComponentModel.Component"/> for which the ImageIndex property is required</param>
+            <returns>An <see cref="T:System.Int32"/> giving the image index.</returns>		
+        </member>
+        <member name="M:ControlVault.MenuSuite.MenuEx.SetImageIndex(System.ComponentModel.Component,System.Int32)">
+            <summary>
+            Sets the ImageIndex property for a given Menucomponent
+            </summary>
+            <param name="component">The <see cref="T:System.ComponentModel.Component"/> for which the ImageIndex property is required</param>
+            <param name="value">An <see cref="T:System.Int32"/> giving the image index.</param>
+        </member>
+        <member name="P:ControlVault.MenuSuite.MenuEx.ImageList">
+            <summary>
+            Gets or sets the <see cref="P:ControlVault.MenuSuite.MenuEx.ImageList"/> which is used to hold menu images.
+            </summary>
+            <value>An <see cref="P:ControlVault.MenuSuite.MenuEx.ImageList"/> which is used to hold menu images.</value>
+        </member>
+        <member name="P:ControlVault.MenuSuite.MenuEx.MenuPainter">
+            <summary>
+            Gets or sets the painter to use when drawing the menu items.
+            </summary>
+            <value>An <see cref="T:ControlVault.MenuSuite.IMenuPainter"/> used to draw the menu items.</value>
+        </member>
+        <member name="T:ControlVault.MenuSuite.Office2003MenuPainter">
+            <summary>
+            A component which implements IMenuPainter in order to transform menus into "Office 2003" style menus.
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.Office2003MenuPainter.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the Office2003MenuPainter class.
+            </summary>
+            <param name="container">The <see cref="T:System.ComponentModel.IContainer"/> to which this component is to be added.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.Office2003MenuPainter.#ctor">
+            <summary>
+            Initializes a new instance of the Office2003MenuPainter class.
+            </summary>		
+        </member>
+        <member name="M:ControlVault.MenuSuite.Office2003MenuPainter.PaintMenuBar(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintBar(System.Drawing.Graphics,System.Drawing.Rectangle)"/>
+            </summary>		
+        </member>
+        <member name="M:ControlVault.MenuSuite.Office2003MenuPainter.PaintBackground(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintBackground(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.Office2003MenuPainter.PaintSeparator(System.Windows.Forms.DrawItemEventArgs,System.Int32)">
+            <summary>
+            Overriden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintSeparator(System.Windows.Forms.DrawItemEventArgs,System.Int32)"/>
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this operation.</param>
+            <param name="imageSize">An <see cref="T:System.Int32"/> containing the desired image size.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.Office2003MenuPainter.PaintHighlight(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintHighlight(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.Office2003MenuPainter.PaintCheck(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintCheck(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="T:ControlVault.MenuSuite.PlainMenuPainter">
+            <summary>
+            A component which implements IMenuPainter in order to paint menus in a simple style.	
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.PlainMenuPainter.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the PlainMenuPainter class.
+            </summary>
+            <param name="container">The <see cref="T:System.ComponentModel.IContainer"/> to which this component is to be added.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.PlainMenuPainter.#ctor">
+            <summary>
+            Initializes a new instance of the PlainMenuPainter class.
+            </summary>		
+        </member>
+        <member name="M:ControlVault.MenuSuite.PlainMenuPainter.PaintMenuBar(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintBar(System.Drawing.Graphics,System.Drawing.Rectangle)"/>
+            </summary>		
+        </member>
+        <member name="M:ControlVault.MenuSuite.PlainMenuPainter.PaintBackground(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintBackground(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.PlainMenuPainter.PaintSeparator(System.Windows.Forms.DrawItemEventArgs,System.Int32)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintSeparator(System.Windows.Forms.DrawItemEventArgs,System.Int32)"/>
+            </summary>		
+        </member>
+        <member name="M:ControlVault.MenuSuite.PlainMenuPainter.PaintHighlight(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintHighlight(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.PlainMenuPainter.PaintCheck(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintCheck(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="T:ControlVault.MenuSuite.RECT">
+            <summary>
+            Translates a Rectangle to a Windows API RECT
+            </summary>
+        </member>
+        <member name="T:ControlVault.MenuSuite.MENUINFO">
+            <summary>
+            The MENUINFO structure contains information about a menu.
+            </summary>
+        </member>
+        <member name="T:ControlVault.MenuSuite.SafeNativeMethods">
+            <summary>
+            Native methods called from this library.
+            </summary>
+        </member>
+        <member name="T:ControlVault.MenuSuite.SkinMenuPainter">
+            <summary>
+            A component which implements IMenuPainter in order to paint menus in a variety of styles.	
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.SkinMenuPainter.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the SkinMenuPainter class.
+            </summary>
+            <param name="container">The <see cref="T:System.ComponentModel.IContainer"/> to which this component is to be added.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.SkinMenuPainter.#ctor">
+            <summary>
+            Initializes a new instance of the SkinMenuPainter class.
+            </summary>		
+        </member>
+        <member name="M:ControlVault.MenuSuite.SkinMenuPainter.PaintGradient(System.Drawing.RectangleF,System.Drawing.RectangleF,System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Drawing2D.LinearGradientMode)">
+            <summary>
+            Paints a linear gradient in the supplied rectangle
+            </summary>
+            <param name="source">A <see cref="T:System.Drawing.RectangleF"/> rectangle from which the gradient is painted</param>
+            <param name="dest">The destination <see cref="T:System.Drawing.RectangleF"/> in which the gradient is painted</param>
+            <param name="g">A <see cref="T:System.Drawing.Graphics"/> object for drawing</param>
+            <param name="c1">The starting <see cref="T:System.Drawing.Color"/> for the gradient</param>
+            <param name="c2">The ending <see cref="T:System.Drawing.Color"/> for the gradient</param>
+            <param name="mode">An <see cref="T:System.Drawing.Drawing2D.LinearGradientMode"/> indicating how to draw the gradient.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.SkinMenuPainter.PaintMenuBar(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintBar(System.Drawing.Graphics,System.Drawing.Rectangle)"/>
+            </summary>		
+        </member>
+        <member name="M:ControlVault.MenuSuite.SkinMenuPainter.PaintBackground(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintBackground(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.SkinMenuPainter.PaintSeparator(System.Windows.Forms.DrawItemEventArgs,System.Int32)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintSeparator(System.Windows.Forms.DrawItemEventArgs,System.Int32)"/>
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this operation.</param>
+            <param name="imageSize">An <see cref="T:System.Int32"/> containing the desired image size.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.SkinMenuPainter.GetTextColor">
+            <summary>
+            Gets the <see cref="T:System.Drawing.Color"/> to be used to paint normal menu text.
+            </summary>
+            <returns>A <see cref="T:System.Drawing.Color"/> to be used when painting text</returns>
+        </member>
+        <member name="M:ControlVault.MenuSuite.SkinMenuPainter.PaintHighlight(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintHighlight(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.SkinMenuPainter.PaintCheck(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintCheck(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.SkinMenuPainter.PaintShortcut(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs)">
+            <summary>
+            Paints the Menu Shortcut of a <see cref="T:System.Windows.Forms.MenuItem"/> object.
+            </summary>
+            <param name="item">The <see cref="T:System.Windows.Forms.MenuItem"/>  to paint.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this operation.</param>
+        </member>
+        <member name="P:ControlVault.MenuSuite.SkinMenuPainter.Skin">
+            <summary>
+            Gets or sets the skin to use when drawing the menus.
+            </summary>
+        </member>
+        <member name="T:ControlVault.MenuSuite.VisualStudioMenuPainter">
+            <summary>
+            A component which implements IMenuPainter in order to transform menus into
+            "Visual Studio.NET 2003" style menus.
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.VisualStudioMenuPainter.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the VisualStudioMenuPainter class.
+            </summary>
+            <param name="container">The <see cref="T:System.ComponentModel.IContainer"/> to which this component is to be added.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.VisualStudioMenuPainter.#ctor">
+            <summary>
+            Initializes a new instance of the VisualStudioMenuPainter class.
+            </summary>		
+        </member>
+        <member name="M:ControlVault.MenuSuite.VisualStudioMenuPainter.PaintMenuBar(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintBar(System.Drawing.Graphics,System.Drawing.Rectangle)"/>
+            </summary>		
+        </member>
+        <member name="M:ControlVault.MenuSuite.VisualStudioMenuPainter.PaintBackground(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintBackground(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.VisualStudioMenuPainter.PaintSeparator(System.Windows.Forms.DrawItemEventArgs,System.Int32)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintSeparator(System.Windows.Forms.DrawItemEventArgs,System.Int32)"/>
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.DrawItemEventArgs"/> object providing data for this operation.</param>
+            <param name="imageSize">An <see cref="T:System.Int32"/> containing the desired image size.</param>
+        </member>
+        <member name="M:ControlVault.MenuSuite.VisualStudioMenuPainter.PaintHighlight(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintHighlight(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="M:ControlVault.MenuSuite.VisualStudioMenuPainter.PaintCheck(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)">
+            <summary>
+            Overridden. See <see cref="M:ControlVault.MenuSuite.BaseMenuPainter.PaintCheck(System.Windows.Forms.MenuItem,System.Windows.Forms.DrawItemEventArgs,System.Boolean,System.Int32)"/>
+            </summary>
+        </member>
+    </members>
+</doc>

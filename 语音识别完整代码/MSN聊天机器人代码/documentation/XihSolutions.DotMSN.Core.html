@@ -1,0 +1,165 @@
+<html dir="LTR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <title>XihSolutions.DotMSN.Core</title>
+    <xml>
+    </xml>
+    <link rel="stylesheet" type="text/css" href="MSDN.css" />
+  </head>
+  <body id="bodyID" class="dtBODY">
+    <div id="nsbanner">
+      <div id="bannerrow1">
+        <table class="bannerparthead" cellspacing="0">
+          <tr id="hdr">
+            <td class="runninghead">DotMSN</td>
+            <td class="product">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="TitleRow">
+        <h1 class="dtH1">XihSolutions.DotMSN.Core Namespace</h1>
+      </div>
+    </div>
+    <div id="nstext">
+      <p>
+						</p>
+      <p>
+        <a href="XihSolutions.DotMSN.CoreHierarchy.html">Namespace hierarchy</a>
+      </p>
+      <h3 class="dtH3">Classes</h3>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr valign="top">
+            <th width="50%">Class</th>
+            <th width="50%">Description</th>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.Factory.html">Factory</a>
+            </td>
+            <td width="50%"> Defines the way in which dotMSN core objects are created. Used by DotMSN core classes. Override these types to use custom-made handlers or processor. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.MessagePool.html">MessagePool</a>
+            </td>
+            <td width="50%"> Stores incoming messages in a buffer and releases them only when all contents are received. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.MSGMessage.html">MSGMessage</a>
+            </td>
+            <td width="50%"> Represents a single MSG command sended over a switchboard or nameserver session. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.MSNMessage.html">MSNMessage</a>
+            </td>
+            <td width="50%"> The base class for all messages which are directly send to, or received from the msn server. This class has the basic methods to perform bytearray to message and message to bytearray conversions. The SB and NS command messages are typical examples which use this class as their baseclass. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.NetworkMessage.html">NetworkMessage</a>
+            </td>
+            <td width="50%"> Presents a single message which is retreived from the network, or can be send to the network. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.NotificationMessage.html">NotificationMessage</a>
+            </td>
+            <td width="50%"> Represents a single NOT or IPG message. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.NSMessage.html">NSMessage</a>
+            </td>
+            <td width="50%"> NSMessage represents a single message, or command, send from and to the Notification Server. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.NSMessagePool.html">NSMessagePool</a>
+            </td>
+            <td width="50%"> Buffers the incoming data from the notification server (NS). </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.SBMessage.html">SBMessage</a>
+            </td>
+            <td width="50%"> Represents a single message, or command, send from and to the switchboard server. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.SBMessagePool.html">SBMessagePool</a>
+            </td>
+            <td width="50%"> Buffers and releases the messages for a switchboard </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.SocketMessageProcessor.html">SocketMessageProcessor</a>
+            </td>
+            <td width="50%"> Processes I/O of network message through a network connection. </td>
+          </tr>
+        </table>
+      </div>
+      <h3 class="dtH3">Interfaces</h3>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr valign="top">
+            <th width="50%">Interface</th>
+            <th width="50%">Description</th>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.IMessageHandler.html">IMessageHandler</a>
+            </td>
+            <td width="50%"> IMessageHandler defines the methods required to handle incoming network messages. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.IMessageProcessor.html">IMessageProcessor</a>
+            </td>
+            <td width="50%"> Defines methods to send network messages. </td>
+          </tr>
+        </table>
+      </div>
+      <h3 class="dtH3">Delegates</h3>
+      <div class="tablediv">
+        <table class="dtTABLE" cellspacing="0">
+          <tr valign="top">
+            <th width="50%">Delegate</th>
+            <th width="50%">Description</th>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.ErrorReceivedEventHandler.html">ErrorReceivedEventHandler</a>
+            </td>
+            <td width="50%"> This delegate is used when the server sends an error code. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.HandlerExceptionEventHandler.html">HandlerExceptionEventHandler</a>
+            </td>
+            <td width="50%"> This delegate is used when an exception was thrown inside the message handler class. </td>
+          </tr>
+          <tr valign="top">
+            <td width="50%">
+              <a href="XihSolutions.DotMSN.Core.ProcessorExceptionEventHandler.html">ProcessorExceptionEventHandler</a>
+            </td>
+            <td width="50%">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <hr />
+      <div id="footer">
+        <p>
+          <a>Copyright 2002-2006 Xih Solutions</a>
+        </p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

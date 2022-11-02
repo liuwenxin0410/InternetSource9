@@ -1,0 +1,71 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: speech - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/speech.res" /d "_DEBUG" /d "_AFXDLL" "D:\语音识别项目资料\识别原代码,VC++版!可以供研究研究\speech 20040601\speech.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1.4C6\LOCALS~1\Temp\RSP10.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/speech.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\语音识别项目资料\识别原代码,VC++版!可以供研究研究\speech 20040601\ChildFrm.cpp"
+"D:\语音识别项目资料\识别原代码,VC++版!可以供研究研究\speech 20040601\MainDlg.cpp"
+"D:\语音识别项目资料\识别原代码,VC++版!可以供研究研究\speech 20040601\MainFrm.cpp"
+"D:\语音识别项目资料\识别原代码,VC++版!可以供研究研究\speech 20040601\speech.cpp"
+"D:\语音识别项目资料\识别原代码,VC++版!可以供研究研究\speech 20040601\speechDoc.cpp"
+"D:\语音识别项目资料\识别原代码,VC++版!可以供研究研究\speech 20040601\speechView.cpp"
+"D:\语音识别项目资料\识别原代码,VC++版!可以供研究研究\speech 20040601\SREngine.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1.4C6\LOCALS~1\Temp\RSP10.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1.4C6\LOCALS~1\Temp\RSP11.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/speech.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\语音识别项目资料\识别原代码,VC++版!可以供研究研究\speech 20040601\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1.4C6\LOCALS~1\Temp\RSP11.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1.4C6\LOCALS~1\Temp\RSP12.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/speech.pdb" /debug /machine:I386 /out:"Debug/speech.exe" /pdbtype:sept 
+".\Debug\ChildFrm.obj"
+".\Debug\MainDlg.obj"
+".\Debug\MainFrm.obj"
+".\Debug\speech.obj"
+".\Debug\speechDoc.obj"
+".\Debug\speechView.obj"
+".\Debug\SREngine.obj"
+".\Debug\StdAfx.obj"
+".\Debug\speech.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1.4C6\LOCALS~1\Temp\RSP12.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ChildFrm.cpp
+MainDlg.cpp
+d:\语音识别项目资料\识别原代码,vc++版!可以供研究研究\speech 20040601\srengine.h(12) : fatal error C1083: Cannot open include file: 'sapi.h': No such file or directory
+MainFrm.cpp
+speech.cpp
+d:\语音识别项目资料\识别原代码,vc++版!可以供研究研究\speech 20040601\srengine.h(12) : fatal error C1083: Cannot open include file: 'sapi.h': No such file or directory
+speechDoc.cpp
+speechView.cpp
+SREngine.cpp
+d:\语音识别项目资料\识别原代码,vc++版!可以供研究研究\speech 20040601\srengine.h(12) : fatal error C1083: Cannot open include file: 'sapi.h': No such file or directory
+Generating Code...
+Error executing cl.exe.
+Creating command line "bscmake.exe /nologo /o"Debug/speech.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\ChildFrm.sbr" ".\Debug\MainDlg.sbr" ".\Debug\MainFrm.sbr" ".\Debug\speech.sbr" ".\Debug\speechDoc.sbr" ".\Debug\speechView.sbr" ".\Debug\SREngine.sbr""
+Creating browse info file...
+BSCMAKE: error BK1506 : cannot open file '.\Debug\MainDlg.sbr': No such file or directory
+Error executing bscmake.exe.
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+speech.exe - 4 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
